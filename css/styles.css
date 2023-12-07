@@ -1,0 +1,408 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 150vh;
+    background-color: #101728;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    height: 100vh;
+    width: 100vw;
+}
+
+.background {
+    z-index: -1;
+    opacity: 0.15;
+    padding-top: 5px;
+    background-image: url(../image/QRlod-backlop.png);
+    background-size: cover;
+    width: 115%;
+    height: 100%;
+    color: aliceblue;
+    background-position: center;
+}
+
+/*INITIALISATION et fond d'écran*/
+
+
+
+
+
+
+
+
+
+
+.logo img {
+    margin-top: 20px;
+    width: 350px;
+}
+
+.navbar {
+    z-index: 999;
+    position: absolute;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+
+}
+
+.navbar .nav-links ul {
+    display: flex;
+}
+
+.navbar .nav-links ul li {
+    margin: 0 2px;
+    list-style-type: none;
+}
+
+.nav-links ul a {
+    color: white;
+    text-decoration: none;
+    height: auto;
+    width: auto;
+}
+
+.nav-item {
+    -webkit-text-stroke: 9px rgba(255, 255, 255, 0.221);
+    font-family: 'Monomaniac One', sans-serif;
+    color: white;
+    font-size: 25px;
+    padding: 29px;
+    flex: 1;
+}
+
+
+.qrlod-game {
+    background: url(../image/trésor.png) no-repeat;
+    z-index: 999;
+    position: relative;
+    background-position: center;
+    background-size: 130%;
+    border-radius: 30px;
+    height: 80px;
+    transition: all .5s ease;
+}
+
+.gide {
+    background: url(../image/sup.png) no-repeat;
+    z-index: 999;
+    position: relative;
+    background-position: center;
+    background-size: 140%;
+    border-radius: 30px;
+    height: 80px;
+    transition: all .5s ease;
+}
+
+.dicord {
+    background: url(../image/discord.png) no-repeat;
+    z-index: 999;
+    position: relative;
+    background-position: center;
+    background-size: 130%;
+    border-radius: 30px;
+    height: 80px;
+    transition: all .5s ease;
+}
+
+.navbar .nav-links ul li:hover {
+    transform: translate(0, -8px);
+    box-shadow: 10px 10px 40px 5px rgba(255, 238, 155, 0.758);
+}
+
+.menu {
+    z-index: 999;
+    display: none;
+    position: absolute;
+    width: 40px;
+    top: 50px;
+    right: 50px;
+}
+
+
+@media screen and (max-width: 900px) {
+    .navbar {
+        padding: 0;
+    }
+
+    .navbar .menu {
+        display: block;
+    }
+
+    .nav-links {
+        z-index: 2;
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.491);
+        backdrop-filter: blur(3px);
+        width: 100%;
+        height: 130vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s ease;
+    }
+
+    #nav-links {
+        margin-left: -100%;
+    }
+
+    #nav-links.show {
+        margin-left: 0;
+    }
+
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .nav-links ul li {
+        margin: 2px 0;
+        font-size: 35px;
+    }
+}
+
+/*Navigation*/
+
+
+
+
+
+
+
+
+
+
+.big {
+    position: absolute;
+    z-index: 3;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.263);
+    color: white;
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 220px;
+}
+
+.tap {
+    position: relative;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.263);
+    color: white;
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    top: 120px;
+    border-radius: 20px;
+    gap: 50px;
+}
+
+.comal {
+    position: relative;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.263);
+    color: white;
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    top: 120px;
+    border-radius: 20px;
+    gap: 50px;
+}
+
+.comal1 {
+    position: relative;
+    z-index: 3;
+    color: white;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    top: 10px;
+    border-radius: 20px;
+    gap: 50px;
+}
+
+.c-bread {
+    position: relative;
+    z-index: 4;
+    background-color: rgba(0, 0, 0, 0.263);
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    top: 120px;
+    border-radius: 20px;
+    gap: 50px;
+}
+
+/*box*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.imat {
+    border-radius: 10px;
+    width: 390px;
+    height: 500px;
+    background-image: url(../image/imageparge\ garde.JPG);
+    background-size: 100%;
+    background-position: center;
+}
+
+.synop {
+    width: 400px;
+    margin-left: 40px;
+    padding: 20px;
+}
+
+.inform {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+@media screen and (max-width: 700px) {
+    .inform {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+@media screen and (max-width: 672px) {
+    .synop {
+        width: 350px;
+    }
+}
+@media screen and (max-width: 572px) {
+    .synop {
+        width: 290px;
+    }
+}
+
+
+.reseau {
+    color: white;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin-left: 40px;
+    padding: 20px;
+}
+
+.reseau a {
+    color: white;
+}
+
+/*photo et mot de l'auteur*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+.card {
+    border-radius: 10px;
+    width: 170px;
+    background: rgba(1, 4, 27, 0.45);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    background: rgba(10, 23, 126, 0.45);
+    transform: scale(1.06);
+}
+
+.card .image {
+    height: 210px;
+    width: 170px;
+}
+
+.card .image img {
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    margin-left: 10px;
+}
+
+.card button {
+    border-radius: 4px;
+    height: 25px;
+    width: 140px;
+    border: none;
+    background: #101728;
+    color: white;
+    transition: all 0.3s ease;
+    font: small-caps bold 14px/1 sans-serif;
+}
+
+.card button:hover {
+    background: #DFC61E;
+    transform: scale(1.06);
+}
+
+/*Cart*/

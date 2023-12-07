@@ -1,0 +1,458 @@
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 0.6em;
+}
+
+::-webkit-scrollbar-track {
+    background: #101728;
+    border-radius: 100px;
+    margin-block: .5em;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(rgb(201, 168, 49), rgb(255, 217, 82), rgb(255, 248, 221));
+    border-radius: 100px;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 150vh;
+    background-color: #101728;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    height: 100vh;
+    width: 100vw;
+}
+
+.background {
+    z-index: -1;
+    opacity: 0.15;
+    padding-top: 5px;
+    background-image: url(../IMAGE/QRlod-backlop.png);
+    background-size: cover;
+    width: 109%;
+    height: 100%;
+    color: aliceblue;
+    background-position: center;
+}
+
+.logo img {
+    margin-top: 20px;
+    width: 350px;
+}
+
+.navbar {
+    z-index: 999;
+    position: absolute;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+
+}
+
+.navbar .nav-links ul {
+    display: flex;
+}
+
+.navbar .nav-links ul li {
+    margin: 0 2px;
+    list-style-type: none;
+}
+
+.nav-links ul a {
+    color: white;
+    text-decoration: none;
+    display: contents;
+}
+
+.nav-item {
+    -webkit-text-stroke: 9px rgba(255, 255, 255, 0.221);
+    font-family: 'Monomaniac One', sans-serif;
+    color: white;
+    font-size: 25px;
+    padding: 29px;
+    flex: 1;
+}
+
+.recherche {
+    border-radius: 30px;
+    z-index: 999;
+    position: relative;
+    margin: 30px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    transition: all .5s ease;
+}
+
+.qrlod-game {
+    background: url(../IMAGE/trésor.png) no-repeat;
+    z-index: 999;
+    position: relative;
+    background-position: center;
+    background-size: 130%;
+    border-radius: 30px;
+    transition: all .5s ease;
+}
+
+.gide {
+    background: url(../IMAGE/sup.png) no-repeat;
+    z-index: 999;
+    position: relative;
+    background-position: center;
+    background-size: 130%;
+    border-radius: 30px;
+    transition: all .5s ease;
+}
+
+.dicord {
+    background: url(../IMAGE/discord.png) no-repeat;
+    z-index: 999;
+    position: relative;
+    background-position: center;
+    background-size: 130%;
+    border-radius: 30px;
+    transition: all .5s ease;
+}
+
+.adult {
+    background: url(../IMAGE/Moins18.png) no-repeat;
+    z-index: 999;
+    position: relative;
+    background-position: center;
+    background-size: 110%;
+    border-radius: 30px;
+    transition: all .5s ease;
+}
+
+.navbar .nav-links ul li:hover {
+    transform: translate(0, -8px);
+    box-shadow: 10px 10px 40px 5px rgba(255, 238, 155, 0.758);
+}
+
+.menu {
+    z-index: 999;
+    display: none;
+    position: absolute;
+    width: 40px;
+    top: 50px;
+    right: 50px;
+}
+
+
+@media screen and (max-width: 900px) {
+    .navbar {
+        padding: 0;
+    }
+
+    .navbar .menu {
+        display: block;
+    }
+
+    .nav-links {
+        z-index: 2;
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.491);
+        backdrop-filter: blur(3px);
+        width: 100%;
+        height: 130vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s ease;
+    }
+
+    #nav-links {
+        margin-left: -100%;
+    }
+
+    #nav-links.show {
+        margin-left: 0;
+    }
+
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .nav-links ul li {
+        margin: 2px 0;
+        font-size: 35px;
+    }
+}
+
+.big {
+    position: absolute;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.263);
+    color: white;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 220px;
+}
+
+.bloc-shap {
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 210px;
+}
+
+.shap {
+    width: 90%;
+    height: auto;
+    padding: 0;
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+
+.language {
+    margin-bottom: 70px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.slam {
+    width: 90%;
+    height: 86px;
+    overflow: auto;
+    white-space: nowrap;
+    /*direction: rtl;*/
+}
+
+.slam button {
+    border-radius: 4px;
+    height: 29px;
+    width: 90px;
+    border: none;
+    background: #101728;
+    color: white;
+    margin: 0;
+    transition: all 0.3s ease;
+    font: small-caps bold 14px/1 sans-serif;
+
+}
+
+.slam button:hover {
+    background: #DFC61E;
+    transform: scale(1.06);
+}
+
+
+/*  */
+.page-break {
+    width: auto;
+    height: 29px;
+    display: inline-block;
+    margin-right: 5px;
+    margin-top: 20px;
+}
+
+.mouv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 85%;
+}
+
+
+
+
+.dropdown {
+    max-width: 300px;
+    height: 33.28px;
+    border-radius: 5px;
+    color: white;
+    background: #0b685770;
+    transition: height 0.4s ease-in-out;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.bloc-top {
+    padding: 7px;
+    display: block;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #00021e82;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.bloc-top:hover {
+    background: #9496a482;
+}
+
+.bloc-top img {
+    width: 20px;
+}
+
+.bloc-links {
+    padding: 0px 22px;
+    height: auto;
+}
+
+.bloc-links li {
+    text-decoration: none;
+    list-style-type: none;
+    padding: 5px 0;
+    height: auto;
+}
+
+.bloc-links li a {
+    font-size: 18px;
+    color: white;
+}
+
+.bloc-links li:last-child {
+    padding-bottom: 25px;
+}
+
+.mouv-plus button {
+    border-radius: 4px;
+    height: 26px;
+    width: 90px;
+    border: none;
+    background: #101728;
+    color: white;
+    transition: all 0.3s ease;
+    font: small-caps bold 14px/1 sans-serif;
+}
+
+.mouv-plus button:hover {
+    background: #DFC61E;
+    transform: scale(1.06);
+}
+
+
+
+@media screen and (max-width: 470px) {
+    .mouv {
+        width: 100%;
+    }
+
+    .bloc-shap {
+        margin-top: 270px;
+    }
+
+    .shap {
+        width: 100%;
+    }
+
+    .slam {
+        height: auto;
+    }
+
+}
+
+.chatforum {
+    background: linear-gradient(200deg, #DFC61E, #fff197);
+    border: 2px solid #f5de46;
+    border-radius: 20px;
+    height: auto;
+    width: auto;
+    padding: 17px;
+    margin: 20px;
+    color: #542108;
+    font: small-caps bold 15px/1 sans-serif;
+    transition: all 0.3s ease;
+}
+
+.chatforum:hover {
+    background: linear-gradient(100deg, #DFC61E, #fff197);
+    transform: scale(1.04);
+}
+
+.epiall {
+    left: 0;
+    width: 90%;
+    gap: 10px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+
+
+.cast {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    width: 70%;
+}
+
+.butall {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.butall button {
+    color: aliceblue;
+    background: #101728;
+    font: small-caps bold 15px/1 sans-serif;
+    width: 200px;
+    height: 35px;
+    transition: all 0.5s ease;
+}
+
+.butall button:hover {
+    background: linear-gradient(100deg, #DFC61E, #fff197);
+    color: #101728;
+}
+
+.platform {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+@media screen and (max-width: 567px) {
+    .epiall {
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 99%;
+    }
+
+    .platform {
+        margin-left: 30px;
+    }
+}
